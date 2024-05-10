@@ -9,7 +9,7 @@ while True:
  
     response = requests.get(f"https://instagram.com/{user}/")
 
-    if (response.status_code == 400): #400 means it's valid
+    if (response.status_code == 200): #200 means it's valid
         print(Fore.RED + f"INVALID: {user}" + Fore.RESET)
     elif (response.status_code == 404): # 404 is the error code
         print(Fore.GREEN + f"VALID: {user}" + Fore.RESET)
